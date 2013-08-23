@@ -1,4 +1,4 @@
-#TCPCopy - A Powerful TCP Stream Replay Tool
+#A Powerful TCP Stream Replay Tool
 
 TCPCopy is a TCP stream replay tool to support real testing of Internet server applications. 
 
