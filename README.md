@@ -3,12 +3,11 @@
 
 Description
 --------------------------------------
-    TCPCopy is a TCP stream replay tool which could be used realtime and offline and is mainly developed by NetEase and also contributed by developers in other companies (e.g., Taobao). It has been widely used in companies in China (e.g., NetEase, Taobao, Sina, Sohu). 
-
-    As for realtime replay, TCPCopy is an online TCP duplication tool which could copy the TCP live flow on the online server to a target server in realtime, and thus could bring the complexity of online environments to the target server. It is especially useful for live testing and reducing errors before a system being deployed online. For example, when you want to migrate from Apache to Nginx, TCPCopy can help you test it. While Apache is running online, TCPCopy can copy the TCP flows from Apache to Nginx. To Nginx, the TCP flows are just forwarding to it. This will not affect Apache at all except cost a little network bandwidth and CPU load.  
-
-    As for offline replay, TCPCopy is a offline tcp stream replay tool.
-
+>TCPCopy is a TCP stream replay tool which could be used realtime and offline and is mainly developed by NetEase and also contributed by developers in other companies (e.g., Taobao). It has been widely used in companies in China (e.g., NetEase, Taobao, Sina, Sohu). 
+>
+>As for realtime replay, TCPCopy is an online TCP duplication tool which could copy the TCP live flow on the online server to a target server in realtime, and thus could bring the complexity of online environments to the target server. It is especially useful for live testing and reducing errors before a system being deployed online. For example, when you want to migrate from Apache to Nginx, TCPCopy can help you test it. While Apache is running online, TCPCopy can copy the TCP flows from Apache to Nginx. To Nginx, the TCP flows are just forwarding to it. This will not affect Apache at all except cost a little network bandwidth and CPU load.  
+>
+>As for offline replay, TCPCopy is a offline tcp stream replay tool.
 
 
 Scenarios:
