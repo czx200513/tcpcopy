@@ -1,4 +1,4 @@
-#[TCPCopy](https://github.com/wangbin579/tcpcopy) - A Powerful TCP Stream Replay Tool
+# TCPCopy - A Powerful TCP Stream Replay Tool
 
 TCPCopy is a TCP stream replay tool to support real testing of Internet server applications. 
 
