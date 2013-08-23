@@ -33,7 +33,7 @@ How does TCPCopy work
     
     There are two kinds of frameworks that TCPCopy could be used:
 
-	![tcpcopy](https://raw.github.com/octocat/Spoon-Knife/master/forkit.gif)
+![tcpcopy](https://raw.github.com/octocat/Spoon-Knife/master/forkit.gif)
 
 
 Getting TCPCopy installed:
