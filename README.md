@@ -102,45 +102,45 @@ Two quick start options are available:
 
 ###Traditional usage guide
     Run:
-       a) on the target host (root privilege is required):
+    a) on the target host (root privilege is required):
 
-          using ip queue (kernel < 3.5):
-            modprobe ip_queue # if not running
-            iptables -I OUTPUT -p tcp --sport port -j QUEUE # if not set
-            ./intercept 
+      using ip queue (kernel < 3.5):
+        modprobe ip_queue # if not running
+        iptables -I OUTPUT -p tcp --sport port -j QUEUE # if not set
+        ./intercept 
 
-          or
+      or
 
-          using nfqueue (kernel >= 3.5):
-            iptables -I OUTPUT -p tcp --sport port -j NFQUEUE # if not set
-            ./intercept
+      using nfqueue (kernel >= 3.5):
+        iptables -I OUTPUT -p tcp --sport port -j NFQUEUE # if not set
+        ./intercept
 
-       b) on the source host (root privilege is required):
-          sudo ./tcpcopy -x localServerPort-targetServerIP:targetServerPort
+    b) on the source host (root privilege is required):
+      sudo ./tcpcopy -x localServerPort-targetServerIP:targetServerPort
 
 
 ###Advanced usage guide:
-		./configure --enable-advanced --enable-pcap
-		
-		a) On the target server 1 which runs test server applications (root privilege is required):
-		    Set route command appropriately to route response packets to the target server 2
-            For example:
-               route del default gw 61.135.233.219
-               route add default gw 61.135.233.161
-		    61.135.233.219 is the actual IP address which is the default gateway, while 61.135.233.161
-            is the IP address of target server 2. We set these route commands to route all extenal 
-            responses to the target server 2.
+	./configure --enable-advanced --enable-pcap
+	
+	a) On the target server 1 which runs test server applications (root privilege is required):
+	    Set route command appropriately to route response packets to the target server 2
+        For example:
+           route del default gw 61.135.233.219
+           route add default gw 61.135.233.161
+	    61.135.233.219 is the actual IP address which is the default gateway, while 61.135.233.161
+        is the IP address of target server 2. We set these route commands to route all extenal 
+        responses to the target server 2.
 
-		b) On the target server 2 which runs intercept(TCPCopy server) (root privilege is required):
-		    sudo ./intercept -F <filter> -i <device,> 
-		
-		c) On the online source server (root privilege is required):
-		    sudo ./tcpcopy -x localServerPort-targetServerIP:targetServerPort -s <intercept server,> -i <device,> 
-		  
-		Note that the filter format is the same as pcap filter.
-		For example:
-		  ./intercept -i eth0 -F 'tcp and src port 11511' –d
-		Intercept will capture response packets of tcp based application which occupies port 11511 from device eth0
+	b) On the target server 2 which runs intercept(TCPCopy server) (root privilege is required):
+	    sudo ./intercept -F <filter> -i <device,> 
+	
+	c) On the online source server (root privilege is required):
+	    sudo ./tcpcopy -x localServerPort-targetServerIP:targetServerPort -s <intercept server,> -i <device,> 
+	  
+	Note that the filter format is the same as pcap filter.
+	For example:
+	  ./intercept -i eth0 -F 'tcp and src port 11511' –d
+	Intercept will capture response packets of tcp based application which occupies port 11511 from device eth0
 
 
 
