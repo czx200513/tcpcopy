@@ -144,6 +144,9 @@ Two quick start options are available:
 
 
 
+###Additional commands
+./tcpcopy -h or ./intercept -h for more details
+
 
 ##Note
 1. It is tested on Linux only (kernal 2.6 or above)
