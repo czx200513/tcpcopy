@@ -101,6 +101,8 @@ Two quick start options are available:
 ##Running TCPCopy
 
 ###Traditional usage guide
+    Assume "./configure" is configured
+
     Run:
     a) on the target host (root privilege is required):
 
@@ -120,9 +122,9 @@ Two quick start options are available:
 
 
 ###Advanced usage guide:
-	./configure --enable-advanced --enable-pcap
+	Assume "./configure --enable-advanced --enable-pcap" is configured
 
-	run:
+	Run:
 	a) On the target server 1 which runs test server applications (root privilege is required):
 	    Set route command appropriately to route response packets to the target server 2
         For example:
